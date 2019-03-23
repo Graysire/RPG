@@ -4,5 +4,5 @@ package strategyRPG;
 public interface rpgConstants 
 {
 	/** contains all the available character classes */
-	public static final CharacterClass[] CHARACTER_CLASSES = new CharacterClass[7];
+	public static final CharacterClass[] CHARACTER_CLASSES = {new CharacterClass()};
 }

@@ -55,6 +55,7 @@ public class Character extends StatBlock
 		reflexFlatFooted = 10;
 		fortitude = 10;
 		species = "Human";
-		
+		characterClasses = new ArrayList<CharacterClass>();
+		characterClasses.add(new CharacterClass());
 	}
 }
