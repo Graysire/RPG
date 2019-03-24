@@ -21,7 +21,7 @@ public class rpgDice
 	}
 	
 	/**
-	 * gets the number of dice from a String XdY
+	 * gets the number of dice from a String XdY, equal to the minimum roll of the dice
 	 * @param dice the dice phrase to be read
 	 * @return the number of dice X from XdY
 	 */
@@ -47,6 +47,40 @@ public class rpgDice
 		if(dice.contains("d"))
 		{
 			return Integer.parseInt(dice.substring(dice.indexOf('d') + 1));
+		}
+		else
+		{
+			return -1;
+		}
+	}
+	
+	/**
+	 * gets the maximum number dice XdY could roll
+	 * @param dice the dice phrase to be read
+	 * @return the maximum roll on the dice X * Y from XdY
+	 */
+	public static int getMaxRoll(String dice)
+	{
+		if(dice.contains("d"))
+		{
+			return getNumberOfFaces(dice) * getNumberOfDice(dice);
+		}
+		else
+		{
+			return -1;
+		}
+	}
+	
+	/**
+	 * gets the average number rolled on dice XdY
+	 * @param dice the dice phrase to be read
+	 * @return the average roll rounded down
+	 */
+	public static int getAverageRoll(String dice)
+	{
+		if(dice.contains("d"))
+		{
+			return (int) (getNumberOfFaces(dice) * (getNumberOfDice(dice) / 2.0));
 		}
 		else
 		{

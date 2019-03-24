@@ -57,5 +57,6 @@ public class Character extends StatBlock
 		species = "Human";
 		characterClasses = new ArrayList<CharacterClass>();
 		characterClasses.add(new CharacterClass());
+		skills.put(characterClasses.get(0).getSkills()[3], 5);
 	}
 }

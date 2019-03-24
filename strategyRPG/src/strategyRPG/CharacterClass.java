@@ -29,6 +29,9 @@ public class CharacterClass
 	/** bonus to Will Defense for having a level in this class */
 	private int willBonus;
 	
+	/** base number of force points gained every level */
+	private int forcePoints;
+	
 	/**Default Constructor, describes the Nonheroic class */
 	public CharacterClass()
 	{
@@ -45,6 +48,7 @@ public class CharacterClass
 		reflexBonus = 0;
 		fortitudeBonus = 0;
 		willBonus = 0;
+		forcePoints = 0;
 	}
 	
 	/**
@@ -81,5 +85,59 @@ public class CharacterClass
 	public boolean getHeroic()
 	{
 		return isHeroic;
+	}
+	
+	/**
+	 * gets the character class' BAB progression
+	 * @return the character class' BAB progression
+	 */
+	public double getBAB()
+	{
+		return baseAttackProgress;
+	}
+	
+	/**
+	 * gets the array of character class skills
+	 * @return the array of character class skills
+	 */
+	public String[] getSkills()
+	{
+		return skills;
+	}
+	
+	/**
+	 * gets the character class bonus to Reflex Defense
+	 * @return the bonus to Reflex Defense
+	 */
+	public int getReflex()
+	{
+		return reflexBonus;
+	}
+	
+	/**
+	 * gets the character class bonus to Fortitude Defense
+	 * @return the bonus to Fortitude Defense
+	 */
+	public int getFortitude()
+	{
+		return fortitudeBonus;
+	}
+	
+	/**
+	 * gets the character class bonus to Will Defense
+	 * @return the bonus to Will Defense
+	 */
+	public int getWill()
+	{
+		return willBonus;
+	}
+	
+	/**
+	 * gets the character class' base force points
+	 * @return the base force points
+	 */
+	public int getForce()
+	{
+		return forcePoints;
 	}
 }

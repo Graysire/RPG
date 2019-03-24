@@ -9,6 +9,8 @@ import java.util.ArrayList;
  */
 public abstract class StatBlock 
 {
+	/** The name of the character */
+	protected String name;
 	/** A character's strength and physical power */
 	protected int strength;
 	/** A character's dexterity and agility */
