@@ -6,35 +6,42 @@ public class Tester {
 	{
 		new StartLoader();
 		
-		System.out.println("Testing rpgConstants Constants");
+		System.out.println("Testing rpgConstants' Constants");
 		for(int i = 0; i < rpgConstants.FEATS.size(); i++)
 		{
 			System.out.println(rpgConstants.FEATS.keySet().toArray()[i]);
 			System.out.println("\t"+rpgConstants.FEATS.values().toArray()[i]);
 		}
+		for(int i = 0; i < rpgConstants.TALENTS.size(); i++)
+		{
+			System.out.println(rpgConstants.TALENTS.keySet().toArray()[i]);
+			System.out.println("\t"+rpgConstants.TALENTS.values().toArray()[i]);
+		}
 		
 		System.out.println("Testing Character Class get methods using rpgConstants");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getName());
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getHitDice() + " HD");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getNumTrained() + " Base Trained Skills");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getHeroic() + " heroism");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getBAB() + " BAB");
-		String[] skills = rpgConstants.CHARACTER_CLASSES[0].getSkills();
-		System.out.print("Class Skills: ");
-		for(int i = 1; i < skills.length; i++)
+		for(int i = 0; i < rpgConstants.CHARACTER_CLASSES.length; i++)
 		{
-			System.out.print(skills[i - 1] +", ");
-			if(i % 6 == 0)
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getName());
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getHitDice() + " HD");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getNumTrained() + " Base Trained Skills");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getHeroic() + " heroism");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getBAB() + " BAB");
+			String[] skills = rpgConstants.CHARACTER_CLASSES[i].getSkills();
+			System.out.print("Class Skills: ");
+			for(int a = 1; a < skills.length; a++)
 			{
-				System.out.print("\r");
+				System.out.print(skills[a - 1] +", ");
+				if(a % 6 == 0)
+				{
+					System.out.print("\r");
+				}
 			}
+			System.out.print(skills[skills.length - 1] + "\r");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getReflex() + " Reflex");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getFortitude() + " Fortitude");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getWill() + " Will");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getForce() + " Base Force Points\r");
 		}
-		System.out.print(skills[skills.length - 1] + "\r");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getReflex() + " Reflex");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getFortitude() + " Fortitude");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getWill() + " Will");
-		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getForce() + " Base Force Points");
-		
 		/* Tests the dice roller, remove comments to use */ /*
 		System.out.println("Testing Dice Roller");
 		for(int i = 1; i < 101; i ++)

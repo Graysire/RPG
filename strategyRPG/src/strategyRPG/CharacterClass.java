@@ -52,6 +52,33 @@ public class CharacterClass
 	}
 	
 	/**
+	 * Constructor for a fully customized character class
+	 * @param name the name of the character class
+	 * @param hitDice the size of the character class' hit dice
+	 * @param numSkills the base number of trained skills the character class gets
+	 * @param heroic whether the character class is heroic
+	 * @param attackBonus the attack bonus progression of the character class
+	 * @param skills the class skill list for the character class
+	 * @param refBonus the character class' bonus to reflex defense
+	 * @param fortBonus the character class' bonus to fortitude defense
+	 * @param willBonus the character class' bonus to will defense
+	 * @param force the character class' base force points
+	 */
+	public CharacterClass(String name, String hitDice, int numSkills, boolean heroic, double attackBonus, String[] skills, int refBonus, int fortBonus, int willBonus, int force)
+	{
+		this.name = name;
+		this.hitDice = hitDice;
+		numTrainedSkills = numSkills;
+		isHeroic = heroic;
+		baseAttackProgress = attackBonus;
+		this.skills = skills;
+		reflexBonus = refBonus;
+		fortitudeBonus = fortBonus;
+		this.willBonus = willBonus;
+		forcePoints = force;
+	}
+	
+	/**
 	 * gets the name of the character class
 	 * @return the name of the character class
 	 */
