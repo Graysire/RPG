@@ -10,7 +10,7 @@ public class CharacterClass
 	/** The name of the character class */
 	private String name;
 	/** The level achieved in the class so far */
-	private int level;
+	private int level = 0;
 	/** The dice roll used to determine hit points gained whenever a new level si gained */
 	private String hitDice;
 	/** Number of trained skills selected at 1st level */
@@ -150,6 +150,9 @@ public class CharacterClass
 		return level;
 	}
 	
+	/**
+	 * levels the character class once
+	 */
 	public void levelUp()
 	{
 		level++;

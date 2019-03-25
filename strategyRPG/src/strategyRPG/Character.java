@@ -10,8 +10,6 @@ import java.util.HashMap;
  */
 public class Character extends StatBlock
 {
-	/** The name of the character */
-	protected String name;
 	
 	/** A character's constitution and stamina */
 	protected int constitution;
@@ -36,9 +34,9 @@ public class Character extends StatBlock
 	/** The map of all the character's trained skills to skill bonuses */
 	protected HashMap<String, Integer> skills;
 	/** The map of the character's feats to feat descriptions */
-	protected HashMap<String, String> feats;
+	protected String[] feats;
 	/** The map of the character's talents to talent descriptions */
-	protected HashMap<String, String> talents;
+	protected String[] talents;
 	
 	/** Default Constructor, creates a level 1 human nonheroic character */
 	public Character()
@@ -55,8 +53,12 @@ public class Character extends StatBlock
 		reflexFlatFooted = 10;
 		fortitude = 10;
 		species = "Human";
+		size = Size.MEDIUM;
 		characterClasses = new ArrayList<CharacterClass>();
 		characterClasses.add(new CharacterClass());
-		skills.put(characterClasses.get(0).getSkills()[3], 5);
+		characterClasses.get(0).levelUp();
+		skills.put(characterClasses.get(0).getSkills()[3], 10);
+		feats = new String[]{"Armor Proficiency(Light)","Skill Focus(Deception)","Armor Proficiency(Medium)"};
+		talents = new String[0];
 	}
 }

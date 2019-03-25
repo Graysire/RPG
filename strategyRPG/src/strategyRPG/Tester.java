@@ -4,6 +4,15 @@ public class Tester {
 
 	public static void main(String[] args) 
 	{
+		new StartLoader();
+		
+		System.out.println("Testing rpgConstants Constants");
+		for(int i = 0; i < rpgConstants.FEATS.size(); i++)
+		{
+			System.out.println(rpgConstants.FEATS.keySet().toArray()[i]);
+			System.out.println("\t"+rpgConstants.FEATS.values().toArray()[i]);
+		}
+		
 		System.out.println("Testing Character Class get methods using rpgConstants");
 		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getName());
 		System.out.println(rpgConstants.CHARACTER_CLASSES[0].getHitDice() + " HD");
@@ -35,7 +44,7 @@ public class Tester {
 			{
 				System.out.print("\r");
 			}
-		} */
+		} //*/
 	}
 
 }
