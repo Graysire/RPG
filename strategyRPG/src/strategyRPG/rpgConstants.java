@@ -10,23 +10,23 @@ public interface rpgConstants
 			new CharacterClass("Jedi", "1d10", 2, true, 1.0, new String[]{"Acrobatics(DEX)","Endurance(CON)","Initiative(DEX)",
 					"Knowledge(Bureaucracy)(INT)","Knowledge(Galactic Lore)(INT)","Knowledge(Life Sciences)","Knowledge(Physical Sciences)(INT)",
 					"Knowledge(Social Sciences)(INT)","Knowledge(Tactics)(INT)","Knowledge(Technology)(INT)","Perception(WIS)","Pilot(DEX)",
-					"Use the Force(CHA)"}, 1, 1, 1, 5),
+					"Use the Force(CHA)"}, 1, 1, 1, 5, new String[0], new String[]{"Adept Negotiator","Force Persuasion","Master Negotiator", "Skilled Advisor"}),
 			new CharacterClass("Noble", "1d6", 6, true, 0.75, new String[]{"Deception(CHA)","Gather Information(CHA)","Initiative(DEX)",
 					"Knowledge(Bureaucracy)(INT)","Knowledge(Galactic Lore)(INT)","Knowledge(Life Sciences)","Knowledge(Physical Sciences)(INT)",
 					"Knowledge(Social Sciences)(INT)","Knowledge(Tactics)(INT)","Knowledge(Technology)(INT)","Perception(WIS)","Persuasion(CHA)",
-					"Pilot(DEX)","Ride(DEX)","Treat Injury(WIS)","Use Computer(INT)"},1,0,2,5),
+					"Pilot(DEX)","Ride(DEX)","Treat Injury(WIS)","Use Computer(INT)"},1,0,2,5, new String[0], new String[0]),
 			new CharacterClass("Scoundrel", "1d6", 4, true, 0.75, new String[]{"Acrobatics(DEX)","Deception(CHA)","Gather Information(CHA)","Initiative(DEX)",
 					"Knowledge(Bureaucracy)(INT)","Knowledge(Galactic Lore)(INT)","Knowledge(Life Sciences)","Knowledge(Physical Sciences)(INT)",
 					"Knowledge(Social Sciences)(INT)","Knowledge(Tactics)(INT)","Knowledge(Technology)(INT)","Mechanics(INT)","Perception(WIS)","Persuasion(CHA)",
-					"Pilot(DEX)","Stealth(DEX)","Use Computer(INT)"},2,0,1,5),
+					"Pilot(DEX)","Stealth(DEX)","Use Computer(INT)"},2,0,1,5, new String[0], new String[0]),
 			new CharacterClass("Scout", "1d8", 5, true, 0.75, new String[]{"Athletics(STR)","Endurance(CON)","Initiative(DEX)",
 					"Knowledge(Bureaucracy)(INT)","Knowledge(Galactic Lore)(INT)","Knowledge(Life Sciences)","Knowledge(Physical Sciences)(INT)",
 					"Knowledge(Social Sciences)(INT)","Knowledge(Tactics)(INT)","Knowledge(Technology)(INT)","Mechanics(INT)","Perception(WIS)","Pilot(DEX)",
-					"Ride(DEX)","Stealth(DEX)","Survival(WIS)"},2,1,0,5),
+					"Ride(DEX)","Stealth(DEX)","Survival(WIS)"},2,1,0,5, new String[0], new String[0]),
 			new CharacterClass("Soldier", "1d10", 3, true, 1.0, new String[]{"Athletics(STR)","Endurnace(CON)","Initiative(DEX)",
-					"Knowledge(Tactics)(INT)","Mechanics(INT)","Perception(WIS)", "Pilot(DEX)","Treat Injury(WIS)","Use Computer(INT)"},1,2,0,5),
+					"Knowledge(Tactics)(INT)","Mechanics(INT)","Perception(WIS)", "Pilot(DEX)","Treat Injury(WIS)","Use Computer(INT)"},1,2,0,5, new String[0], new String[0]),
 			new CharacterClass("Beast", "1d8", 1, false, 0.75, new String[] {"Acrobatics(DEX)","Athletics(STR)","Endurance(CON)","Initiative(DEX)",
-					"Perception(WIS)","Stealth(DEX)","Survival(WIS)"},0,0,0,0)};
+					"Perception(WIS)","Stealth(DEX)","Survival(WIS)"},0,0,0,0, new String[0], new String[0])};
 	
 			
 	/** contains all the available feats and their descriptions */

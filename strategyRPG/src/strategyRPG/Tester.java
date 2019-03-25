@@ -5,7 +5,7 @@ public class Tester {
 	public static void main(String[] args) 
 	{
 		new StartLoader();
-		
+		/*tests out the contents of rpgContantrs' Constants */ /*
 		System.out.println("Testing rpgConstants' Constants");
 		for(int i = 0; i < rpgConstants.FEATS.size(); i++)
 		{
@@ -16,7 +16,7 @@ public class Tester {
 		{
 			System.out.println(rpgConstants.TALENTS.keySet().toArray()[i]);
 			System.out.println("\t"+rpgConstants.TALENTS.values().toArray()[i]);
-		}
+		} */
 		
 		System.out.println("Testing Character Class get methods using rpgConstants");
 		for(int i = 0; i < rpgConstants.CHARACTER_CLASSES.length; i++)
@@ -40,7 +40,36 @@ public class Tester {
 			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getReflex() + " Reflex");
 			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getFortitude() + " Fortitude");
 			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getWill() + " Will");
-			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getForce() + " Base Force Points\r");
+			System.out.println(rpgConstants.CHARACTER_CLASSES[i].getForce() + " Base Force Points");
+			String[] feats = rpgConstants.CHARACTER_CLASSES[i].getFeats();
+			if(feats.length != 0)
+			{
+				System.out.print("Bonus Feats: ");
+				for(int a = 1; a < feats.length; a++)
+				{
+					System.out.print(feats[a - 1] +", ");
+					if(a % 6 == 0)
+					{
+						System.out.print("\r");
+					}
+				}
+				System.out.print(feats[feats.length - 1] + "\r");
+			}
+			String[] talents = rpgConstants.CHARACTER_CLASSES[i].getTalents();
+			if(talents.length != 0)
+			{
+				System.out.print("Talents: ");
+				for(int a = 1; a < talents.length; a++)
+				{
+					System.out.print(talents[a - 1] +", ");
+					if(a % 6 == 0)
+					{
+						System.out.print("\r");
+					}
+				}
+				System.out.print(talents[talents.length - 1] + "\r");
+			}
+			System.out.println("\n");
 		}
 		/* Tests the dice roller, remove comments to use */ /*
 		System.out.println("Testing Dice Roller");

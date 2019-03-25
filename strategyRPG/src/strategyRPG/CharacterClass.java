@@ -11,16 +11,20 @@ public class CharacterClass
 	private String name;
 	/** The level achieved in the class so far */
 	private int level = 0;
-	/** The dice roll used to determine hit points gained whenever a new level si gained */
+	/** The dice roll used to determine hit points gained whenever a new level is gained */
 	private String hitDice;
 	/** Number of trained skills selected at 1st level */
 	private int numTrainedSkills;
 	/** whether or not this class has the bonuses associated with Heroic classes */
 	private boolean isHeroic;
-	/** The progression for Base Attack Bonus this class has */
+	/** The progression for Base Attack Bonus this character class has */
 	private double baseAttackProgress;
-	/** The list of class skills for this class */
+	/** The list of class skills for this character class */
 	private String[] skills;
+	/** The list of bonus feats for this character class */
+	private String[] feats;
+	/** The list of talents for this character class */
+	private String[] talents;
 	
 	/** bonus to Reflex Defense for having a level in this class */
 	private int reflexBonus;
@@ -49,6 +53,9 @@ public class CharacterClass
 		fortitudeBonus = 0;
 		willBonus = 0;
 		forcePoints = 0;
+		feats = new String[] {"Armor Proficiency(Light)","Armor Proficiency(Medium)","Skill Focus(X)","Skill Training(X)",
+				"Weapon Proficiency(Advanced Melee)","Weapon Proficiency(Pistols)","Weapon Proficiency(Rifles)","Weapon Proficiency(Simple)"};
+		talents = new String[0];
 	}
 	
 	/**
@@ -64,7 +71,7 @@ public class CharacterClass
 	 * @param willBonus the character class' bonus to will defense
 	 * @param force the character class' base force points
 	 */
-	public CharacterClass(String name, String hitDice, int numSkills, boolean heroic, double attackBonus, String[] skills, int refBonus, int fortBonus, int willBonus, int force)
+	public CharacterClass(String name, String hitDice, int numSkills, boolean heroic, double attackBonus, String[] skills, int refBonus, int fortBonus, int willBonus, int force, String[] feats, String[] talents)
 	{
 		this.name = name;
 		this.hitDice = hitDice;
@@ -76,6 +83,8 @@ public class CharacterClass
 		fortitudeBonus = fortBonus;
 		this.willBonus = willBonus;
 		forcePoints = force;
+		this.feats = feats;
+		this.talents = talents;
 	}
 	
 	/**
@@ -178,10 +187,29 @@ public class CharacterClass
 	}
 	
 	/**
+	 * gets the character class' bonus feats
+	 * @return the character class' bonus feats
+	 */
+	public String[] getFeats()
+	{
+		return feats;
+	}
+	
+	/**
+	 * gets the character class' talents
+	 * @return the character class' talents
+	 */
+	public String[] getTalents()
+	{
+		return talents;
+	}
+	
+	/**
 	 * levels the character class once
 	 */
 	public void levelUp()
 	{
 		level++;
 	}
+	
 }
