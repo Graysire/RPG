@@ -11,6 +11,7 @@ public abstract class StatBlock
 {
 	/** The name of the character */
 	protected String name;
+	
 	/** A character's strength and physical power */
 	protected int strength;
 	/** A character's dexterity and agility */
@@ -27,6 +28,8 @@ public abstract class StatBlock
 	
 	/** The damage a character can withstand before falling */
 	protected int hitPoints;
+	/** the size of a character */
+	protected Size size;
 	
 	/** The damage in excess of the damage threshold gives a character penalties */
 	protected int damageThreshold;

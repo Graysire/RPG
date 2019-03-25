@@ -140,4 +140,18 @@ public class CharacterClass
 	{
 		return forcePoints;
 	}
+	
+	/**
+	 * gets the character class level
+	 * @return the character class level
+	 */
+	public int getLevel()
+	{
+		return level;
+	}
+	
+	public void levelUp()
+	{
+		level++;
+	}
 }
